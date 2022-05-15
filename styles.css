@@ -1,0 +1,177 @@
+body {
+    background-color: #082032;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+/* Style of landing page */
+#landingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    transition-duration: 1s;
+    padding: 10%;
+}
+
+#startWorkout,
+#startSingleTimer,
+.collapsible {
+    background-color: #FF4C29;
+    color: #082032;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.collapsible {
+    transition: transform .2s;
+    font-size: 40px;
+}
+
+.collapsible:active {
+    transform: scale(1.1);
+}
+
+
+
+
+/* Style of add exercise card */
+
+/* Style the collapsible content */
+.content {
+    padding: 20px;
+    display: none;
+    background-color: #334756;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#exercises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    max-height: 40vh;
+    overflow: scroll;
+}
+
+#addExerciseTimer {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    transition: transform 0.3s;
+}
+
+#addExerciseTimer:active {
+    transform: rotate(360deg);
+}
+
+.exercise,
+.addExercise {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    border-radius: 6px;
+    padding: 6px;
+    width: 90%;
+    flex-grow: 1;
+    background-color: #2C394B;
+}
+
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.counterField {
+    text-align: center;
+}
+
+.counterButton {
+    width: 40px;
+    background-color: #082032;
+}
+
+
+
+.remove {}
+
+
+.addAndRemove:active {
+    background-color: red;
+}
+
+/* Style of the active workout timer */
+#workout {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    padding: 10%;
+}
+
+#time {
+    text-align: center;
+    font-size: 25vh;
+    color: #FF4C29;
+    font-weight: bold;
+}
+
+#progress {
+    width: 100%;
+    background-color: #334756;
+    border-radius: 6px;
+}
+
+#bar {
+    width: 0%;
+    height: 8vh;
+    background-color: #FF4C29;
+    border-radius: 6px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#endWorkout,
+#resetTimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    height: 8vh;
+    border-radius: 6px;
+    border: none;
+    font-size: 10vh;
+}
+
+/* Style of the active single timer */
+
+#singleTimer {
+    text-align: center;
+    font-size: 10vh;
+    padding: 8px;
+    max-width: 50%;
+    border-radius: 5px;
+    border: 4px solid black;
+}

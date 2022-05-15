@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="landingPage">
+        <div style="background-color: #FF4C29; border-radius: 5px;">
+            <button type="button" class="collapsible">
+                🏋🏽
+            </button>
+            <div class="content">
+                <div id="exercises">
+                </div>
+
+                <div class="addExercise">
+                    <div id="repeats" class="counterContainer">
+                        <div class="counterField">
+                            3
+                        </div>
+                    </div>
+                    <div id="durationRepeats" class="counterContainer">
+                        <div class="counterField">
+                            40
+                        </div>
+                    </div>
+                    <div id="durationPause" class="counterContainer">
+                        <div class="counterField">
+                            180
+                        </div>
+                    </div>
+                    <div id="repeatsExercise" class="counterContainer">
+                        <div class="counterField">
+                            1
+                        </div>
+                    </div>
+                    <div id="addExerciseTimer">
+                        ➕
+                    </div>
+                </div>
+
+                <button id="startWorkout">►</button>
+            </div>
+        </div>
+        <div style="background-color: #FF4C29; border-radius: 5px;">
+            <button type="button" class="collapsible">
+                ⏱
+            </button>
+            <div class="content">
+                <input id="singleTimer" value=30>
+                </input>
+                <button id="startSingleTimer">►</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="workout">
+        <div id="time">
+            0
+        </div>
+        <div id="progress">
+            <div id="bar">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div id="endWorkout">❌</div>
+            <div id="resetTimer">🔄</div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
