@@ -80,7 +80,7 @@ const progressUpdater = setInterval(() => {
 })
 
 // time array: [40,120,10] with elemnts in seconds
-const audio = new Audio('https://www.soundjay.com/buttons/beep-01a.mp3')
+const audio = new Audio('./media/beep.mp3')
 
 function timerWorkout(timeArray) {
     let index = 0;
