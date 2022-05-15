@@ -3,11 +3,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-
-
-
-
-
 /* Style of landing page */
 #landingPage {
     display: flex;
@@ -15,7 +10,7 @@ body {
     justify-content: space-evenly;
     height: 100vh;
     transition-duration: 1s;
-    padding: 10%;
+    padding: 5%;
 }
 
 #startWorkout,
@@ -88,7 +83,6 @@ body {
     border-radius: 6px;
     padding: 6px;
     width: 90%;
-    flex-grow: 1;
     background-color: #2C394B;
 }
 

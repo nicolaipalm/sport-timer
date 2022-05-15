@@ -41,13 +41,24 @@ let timeStopped = true;
 let interval = NaN;
 function activateTimer() {
     let nowFixed = new Date()
+
     interval = setInterval(() => {
-        let now = new Date();
-        currentSeconds = (now.getTime() - nowFixed.getTime()) / 1000 + stoppedTime;
-        time.innerHTML = parseInt(currentSeconds);
+        if (currentSeconds <= targetSeconds) {
+            let now = new Date();
+            currentSeconds = (now.getTime() - nowFixed.getTime()) / 1000 + stoppedTime;
+            time.innerHTML = parseInt(currentSeconds);
+            timeStopped = false;
+        }
+        else {
+            stopTimer()
+        }
     }, 10)
-    timeStopped = false;
+
 }
+
+
+
+
 
 function stopTimer() {
     stoppedTime = currentSeconds;
@@ -69,6 +80,8 @@ const progressUpdater = setInterval(() => {
 })
 
 // time array: [40,120,10] with elemnts in seconds
+const audio = new Audio('https://www.soundjay.com/buttons/beep-01a.mp3')
+
 function timerWorkout(timeArray) {
     let index = 0;
     let started = false;
@@ -78,6 +91,7 @@ function timerWorkout(timeArray) {
         if (timeArray.length <= index) {
             stopTimer();
             clearInterval(id);
+            time.innerHTML = "👏🏽";
         }
 
         else if (!started) {
@@ -85,11 +99,22 @@ function timerWorkout(timeArray) {
             resetTimer();
             activateTimer();
             started = true;
+            // set color of progress bar if it is pause 
+            if (targetSeconds > 80) {
+                time.style.color = "#8FBDD3";
+                bar.style.backgroundColor = "#8FBDD3";
+            }
+            else {
+                time.style.color = "#FF4C29";
+                bar.style.backgroundColor = "#FF4C29";
+            }
         }
 
         else if (targetSeconds <= currentSeconds) {
             started = false;
             index++;
+            // play beep if the current round is finished
+            audio.play()
         }
     }, 10)
 }
