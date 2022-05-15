@@ -1,7 +1,8 @@
 ## Workout timer
 This is a simple timer for exercises.
 It allows the user to repeat timers with different times.
-The user interface should be more or less self-explanatory, so just play around. 
+The user interface should be more or less self-explanatory, so [just play around](https://nicolaipalm.github.io/sport-timer/). 
+
 
 A detailed explanation will follow. 
 
