@@ -24,7 +24,7 @@ function parseWorkout() {
         }
 
         // remove last item since it is a pause
-        workoutPlan = workoutPlan.pop();
+        workoutPlan.pop();
     })
 }
 
