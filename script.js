@@ -23,9 +23,10 @@ function parseWorkout() {
             workoutPlan.push(timePause);
         }
 
-        // remove last item since it is a pause
-        workoutPlan.pop();
+
     })
+    // remove last item since it is a pause
+    workoutPlan.pop();
 }
 
 ///////////
